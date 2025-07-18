@@ -14,12 +14,10 @@ It allows users to search and browse Pokémon, and view their stats, image, and 
 
 ---
 
-## Technologies Used
+## Prerequisites
 
-- [React](https://reactjs.org/)
-- [PokéAPI](https://pokeapi.co/)
-- [Vite](https://vitejs.dev/)
-- CSS
+- **Node.js**
+- **npm**
 
 ---
 
@@ -28,7 +26,7 @@ It allows users to search and browse Pokémon, and view their stats, image, and 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/andriniainanekena/hei-school-react.git
-   cd hei-school-react
+   cd pokedex-react
    ```
 
 2. **Install Dependencies**:
