@@ -40,3 +40,30 @@ body {
   letter-spacing: 2px;
   margin: 0;
 }
+
+.search-container {
+  margin: 2.5rem 0;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 18px 25px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--secondary-color-translucent, rgba(52, 152, 219, 0.3));
+}
