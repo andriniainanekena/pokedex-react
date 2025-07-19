@@ -1,49 +1,48 @@
 import './PokemonModal.css';
 
 function PokemonModal({ pokemon, onClose }) {
-const typeColors = {
-  fire: '#f08030',
-  grass: '#78c850',
-  water: '#6890f0',
-  bug: '#a8b820',
-  normal: '#a8a878',
-  poison: '#a040a0',
-  electric: '#f8d030',
-  ground: '#e0c068',
-  fairy: '#ee99ac',
-  fighting: '#c03028',
-  psychic: '#f85888',
-  rock: '#b8a038',
-  ghost: '#705898',
-  ice: '#98d8d8',
-  dragon: '#7038f8',
-  dark: '#705848',
-  steel: '#b8b8d0',
-  flying: '#a890f0'
-};
+  const maxStat = 255; // The maximum possible value for a base stat
 
-const primaryType = pokemon.types[0].type.name;
-const modalStyle = {
-  '--type-color': typeColors[primaryType] || '#a8a878',
-};
+  const typeColors = {
+    fire: '#f08030',
+    grass: '#78c850',
+    water: '#6890f0',
+    bug: '#a8b820',
+    normal: '#a8a878',
+    poison: '#a040a0',
+    electric: '#f8d030',
+    ground: '#e0c068',
+    fairy: '#ee99ac',
+    fighting: '#c03028',
+    psychic: '#f85888',
+    rock: '#b8a038',
+    ghost: '#705898',
+    ice: '#98d8d8',
+    dragon: '#7038f8',
+    dark: '#705848',
+    steel: '#b8b8d0',
+    flying: '#a890f0'
+  };
 
-const maxStat = 255;
+  const primaryType = pokemon.types[0].type.name;
+  const modalStyle = {
+    '--type-color': typeColors[primaryType] || '#a8a878',
+  };
 
-const statAbbreviations = {
-  'hp': 'HP',
-  'attack': 'ATK',
-  'defense': 'DEF',
-  'special-attack': 'SPA',
-  'special-defense': 'SPD',
-  'speed': 'SPE'
-};
+  const statAbbreviations = {
+    'hp': 'HP',
+    'attack': 'ATK',
+    'defense': 'DEF',
+    'special-attack': 'SPA',
+    'special-defense': 'SPD',
+    'speed': 'SPE'
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
       <div className="modal-content" style={modalStyle} onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>✕</button>
-
+        
         <div className="modal-pokemon-profile">
           <div className="modal-image-wrapper">
             <img
@@ -60,7 +59,6 @@ const statAbbreviations = {
             <span className="detail-label">Height:</span> <span>{pokemon.height / 10} m</span>
           </div>
         </div>
-      </div>
 
         <div className="modal-pokemon-stats">
           <h3 className="stats-title">Base Stats</h3>
@@ -77,7 +75,8 @@ const statAbbreviations = {
             </div>
           ))}
         </div>
-        
+
+      </div>
     </div>
   );
 }
