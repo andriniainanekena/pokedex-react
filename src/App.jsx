@@ -40,7 +40,19 @@ function App() {
     setCurrentPage(1);
   }, [searchTerm, allPokemon]);
 
-  
+  const totalPages = Math.ceil(filteredPokemon.length / itemsPerPage);
+  const paginatedPokemon = filteredPokemon.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
   return (
     <div className="pokedex-container">
       <header className="pokedex-header">
