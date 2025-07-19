@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+:root {
+  --font-main: 'Montserrat', sans-serif;
+  --font-title: 'Poppins', sans-serif;
+  --background-color: #f4f7fc;
+  --card-background: #ffffff;
+  --text-color: #2c3e50;
+  --text-color-light: #8a99ab;
+  --primary-color: #e74c3c;
+  --secondary-color: #3498db;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
+}
