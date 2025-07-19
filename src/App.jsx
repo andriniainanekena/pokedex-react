@@ -53,6 +53,15 @@ function App() {
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
+
+  const openModal = (pokemon) => {
+    setSelectedPokemon(pokemon);
+  };
+
+  const closeModal = () => {
+    setSelectedPokemon(null);
+  };
+  
   return (
     <div className="pokedex-container">
       <header className="pokedex-header">
