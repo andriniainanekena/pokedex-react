@@ -67,3 +67,16 @@
   object-fit: contain;
   filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
 }
+
+.modal-name {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.modal-id {
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
