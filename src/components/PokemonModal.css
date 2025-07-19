@@ -28,3 +28,20 @@
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
   border-top: 8px solid var(--type-color, var(--primary-color));
 }
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
