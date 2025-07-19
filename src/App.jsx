@@ -58,6 +58,15 @@ function App() {
       <header className="pokedex-header">
         <h1 className="pokedex-title">Pokédex</h1>
       </header>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Rechercher un Pokémon..."
+          className="search-input"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
     </div>
   );
 }
