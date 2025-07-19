@@ -147,3 +147,20 @@
   from { width: 0%; }
   to { width: var(--stat-width); }
 }
+
+@media (max-width: 768px) {
+  .modal-content {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    max-width: 350px;
+  }
+
+  .modal-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .stat {
+    grid-template-columns: 50px 1fr 40px;
+  }
+}
