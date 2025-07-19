@@ -12,3 +12,31 @@
   --border-radius: 16px;
   --box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
 }
+
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.pokedex-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.pokedex-header {
+  margin-bottom: 2rem;
+}
+
+.pokedex-title {
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
