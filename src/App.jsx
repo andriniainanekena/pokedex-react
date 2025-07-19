@@ -32,7 +32,14 @@ function App() {
     fetchAllPokemons();
   }, []);
 
-  
+  useEffect(() => {
+    const filtered = allPokemon.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredPokemon(filtered);
+    setCurrentPage(1);
+  }, [searchTerm, allPokemon]);
+
   
   return (
     <div className="pokedex-container">
