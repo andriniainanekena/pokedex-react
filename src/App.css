@@ -13,7 +13,6 @@
   --box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
 }
 
-
 body {
   margin: 0;
   font-family: var(--font-main);
@@ -66,4 +65,11 @@ body {
 .search-input:focus {
   outline: none;
   box-shadow: 0 0 0 4px var(--secondary-color-translucent, rgba(52, 152, 219, 0.3));
+}
+
+.loading {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-top: 5rem;
+  font-weight: 600;
 }
