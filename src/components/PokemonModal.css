@@ -80,3 +80,19 @@
   color: var(--text-color-light);
   margin-bottom: 1rem;
 }
+
+.modal-details {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 0.5rem 1rem;
+  width: max-content;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1rem;
+}
+
+.detail-label {
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: right;
+}
+
