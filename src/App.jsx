@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import PokemonCard from './components/PokemonCard.jsx';
+import PokemonModal from './components/PokemonModal.jsx';
 import './App.css';
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const itemsPerPage = 18;
+
   useEffect(() => {
     const fetchAllPokemons = async () => {
       try {
@@ -61,12 +64,13 @@ function App() {
   const closeModal = () => {
     setSelectedPokemon(null);
   };
-  
+
   return (
     <div className="pokedex-container">
       <header className="pokedex-header">
         <h1 className="pokedex-title">Pokédex</h1>
       </header>
+
       <div className="search-container">
         <input
           type="text"
@@ -76,6 +80,40 @@ function App() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
+
+      {loading ? (
+        <div className="loading">Chargement des Pokémon...</div>
+      ) : (
+        <>
+          <div className="pokemon-grid">
+            {paginatedPokemon.map((pokemon) => (
+              <PokemonCard key={pokemon.id} pokemon={pokemon} onClick={openModal} />
+            ))}
+          </div>
+
+          <div className="pagination">
+            <button
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+              className="pagination-btn"
+            >
+              &lt;
+            </button>
+            <span className="pagination-info">Page {currentPage} sur {totalPages}</span>
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+              className="pagination-btn"
+            >
+              &gt;
+            </button>
+          </div>
+        </>
+      )}
+
+      {selectedPokemon && (
+        <PokemonModal pokemon={selectedPokemon} onClose={closeModal} />
+      )}
     </div>
   );
 }
