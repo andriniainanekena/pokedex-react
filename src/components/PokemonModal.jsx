@@ -27,6 +27,17 @@ const modalStyle = {
   '--type-color': typeColors[primaryType] || '#a8a878',
 };
 
+const maxStat = 255;
+
+const statAbbreviations = {
+  'hp': 'HP',
+  'attack': 'ATK',
+  'defense': 'DEF',
+  'special-attack': 'SPA',
+  'special-defense': 'SPD',
+  'speed': 'SPE'
+};
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -50,6 +61,23 @@ const modalStyle = {
           </div>
         </div>
       </div>
+
+        <div className="modal-pokemon-stats">
+          <h3 className="stats-title">Base Stats</h3>
+          {pokemon.stats.map(stat => (
+            <div key={stat.stat.name} className="stat">
+              <span className="stat-name">{statAbbreviations[stat.stat.name] || stat.stat.name}</span>
+              <div className="stat-bar">
+                <div 
+                  className="stat-bar-inner"
+                  style={{ '--stat-width': `${(stat.base_stat / maxStat) * 100}%` }}
+                ></div>
+              </div>
+              <span className="stat-value">{stat.base_stat}</span>
+            </div>
+          ))}
+        </div>
+        
     </div>
   );
 }
