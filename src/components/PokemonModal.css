@@ -12,3 +12,19 @@
   backdrop-filter: blur(5px);
   animation: fadeIn 0.3s ease;
 }
+
+.modal-content {
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 800px;
+  color: var(--text-color);
+  position: relative;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  border-top: 8px solid var(--type-color, var(--primary-color));
+}
