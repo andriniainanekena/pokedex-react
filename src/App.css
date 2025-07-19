@@ -120,3 +120,28 @@ body {
   color: var(--text-color-light);
 }
 
+@media (max-width: 1200px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pokedex-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
