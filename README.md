@@ -1,6 +1,6 @@
 # Pokédex React
 
-A simple Pokédex web application built with **React** and powered by the [PokéAPI](https://pokeapi.co/).  
+A simple Pokédex web application built with **React** and powered by [PokéAPI](https://pokeapi.co/).  
 It allows users to search and browse Pokémon, and view their stats, image, and evolution information.
 
 ---
